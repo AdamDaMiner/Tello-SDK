@@ -38,6 +38,7 @@ public class HandlerManager implements HttpHandler {
 
         modeManger.addMode(new HoverMode("Hover", "Hovers 50cm up"));
         modeManger.addMode(new HoverMode("HoverLeft", "Hovers 50cm up and left"));
+        modeManger.addMode(new HoverMode("HoverLeftAndFlip", "Hovers 50cm up, moves left 100 cm, and flips left."));
     }
 
     public static ModeManger getModeManger() {
