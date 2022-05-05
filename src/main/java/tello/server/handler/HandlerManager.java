@@ -9,6 +9,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 import tello.modes.ModeManger;
+import tello.modes.mode.FlyAndFlip;
 import tello.modes.mode.HoverLeftMode;
 import tello.modes.mode.HoverMode;
 import tello.modes.mode.MoveLeftAndFlip;
@@ -41,6 +42,7 @@ public class HandlerManager implements HttpHandler {
         modeManger.addMode(new HoverMode("Hover", "Hovers 50cm up"));
         modeManger.addMode(new HoverLeftMode("HoverLeft", "Hovers 50cm up and left"));
         modeManger.addMode(new MoveLeftAndFlip("HoverLeftAndFlip", "Hovers 50cm up, moves left 100 cm, and flips left."));
+        modeManger.addMode(new FlyAndFlip("FlyAndFLip", "Flys and flips a bunch."));
     }
 
     public static ModeManger getModeManger() {
