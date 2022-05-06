@@ -13,6 +13,7 @@ import tello.modes.mode.FlyAndFlip;
 import tello.modes.mode.HoverLeftMode;
 import tello.modes.mode.HoverMode;
 import tello.modes.mode.MoveLeftAndFlip;
+import tello.modes.mode.MoveSquareMode;
 import tello.server.constant.ServerConstant;
 import tello.server.handler.ServerResourceHandler.Handler404;
 
@@ -43,6 +44,7 @@ public class HandlerManager implements HttpHandler {
         modeManger.addMode(new HoverLeftMode("HoverLeft", "Hovers 50cm up and left"));
         modeManger.addMode(new MoveLeftAndFlip("HoverLeftAndFlip", "Hovers 50cm up, moves left 100 cm, and flips left."));
         modeManger.addMode(new FlyAndFlip("FlyAndFLip", "Flys and flips a bunch."));
+        modeManger.addMode(new MoveSquareMode("MoveSquareMode", "Moves in a square pattern 5 times."));
     }
 
     public static ModeManger getModeManger() {
